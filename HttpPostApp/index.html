@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function evaHttpPost() {
+        var evaBotId = "a75bac727ec60245c9b14c4c04";
+        var jsonString = '{"bot_id":"' + evaBotId + '","text":"' + document.getElementById("output").value + '"}';
+        console.log(jsonString);
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "https://api.groupme.com/v3/bots/post", true);
+        xhttp.send(jsonString);
+        document.getElementById("output").value = "Eva will post your message. Type another message?";
+    }
+</script>
+</head>
+<body>
+<h3>Type what you want eva to say below</h3>
+<textarea id="output" rows="4" cols="50">Type message here...</textarea>
+<input type="button" value="Submit" onclick="evaHttpPost();">
+</body>
+</html>
