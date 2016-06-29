@@ -2,20 +2,36 @@
 <html>
 <head>
 <script>
-    function evaHttpPost() {
+    function httpPostComment() {
         var evaBotId = "a75bac727ec60245c9b14c4c04";
-        var jsonString = '{"bot_id":"' + evaBotId + '","text":"' + document.getElementById("output").value + '"}';
+        var jsonString = '{"bot_id":"' + evaBotId + '","text":"' + document.getElementById("commentText").value + '"}';
         console.log(jsonString);
         var xhttp = new XMLHttpRequest();
         xhttp.open("POST", "https://api.groupme.com/v3/bots/post", true);
         xhttp.send(jsonString);
-        document.getElementById("output").value = "Eva will post your message. Type another message?";
+        document.getElementById("commentText").value = "Eva posted your message. Type another message?";
+    }
+
+    function httpPostImage() {
+        var evaBotId = "a75bac727ec60245c9b14c4c04";
+        var testText = "Testing image text";
+        var testUrl = "http://cdn2-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-8.jpg";
+        var jsonString = '{"bot_id":"' + evaBotId + '","text":"' + testText + '",' +
+        '"attachments":[{"type":"image","url":"' + testUrl + '"}]}';
+        /* document.getElementById("imageLink").value */
+        console.log(jsonString);
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "https://api.groupme.com/v3/bots/post", true);
+        xhttp.send(jsonString);
     }
 </script>
 </head>
 <body>
-<h3>Type what you want eva to say below</h3>
-<textarea id="output" rows="4" cols="50">Type message here...</textarea>
-<input type="button" value="Submit" onclick="evaHttpPost();">
+<h3>Type what you want Eva to say!</h3>
+<textarea id="commentText" rows="4" cols="50">Type message here...</textarea>
+<h3>If you want Eva to also post an image, copy and paste the link below.</h3>
+<br>
+<input type="button" value="Submit Comment" onclick="httpPostComment();">
+<input type="button" value="Submit Image" onclick="httpPostImage();">
 </body>
 </html>
