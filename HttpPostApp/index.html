@@ -22,6 +22,8 @@
         var xhttp = new XMLHttpRequest();
         xhttp.open("POST", "https://api.groupme.com/v3/bots/post", true);
         xhttp.send(jsonString);
+        document.getElementById("commentText").value = "Eva posted your message. Type another message?";
+        document.getElementById("imageLink").value = "Eva posted your image. Paste another link?";
     }
 </script>
 </head>
