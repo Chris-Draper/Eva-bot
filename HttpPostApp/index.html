@@ -14,11 +14,10 @@
 
     function httpPostImage() {
         var evaBotId = "a75bac727ec60245c9b14c4c04";
-        var testText = "Testing image text";
-        var testUrl = "http://cdn2-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-8.jpg";
-        var jsonString = '{"bot_id":"' + evaBotId + '","text":"' + testText + '",' +
-        '"attachments":[{"type":"image","url":"' + testUrl + '"}]}';
-        /* document.getElementById("imageLink").value */
+        var text = document.getElementById("commentText").value
+        var url = document.getElementById("imageLink").value;
+        var jsonString = '{"bot_id":"' + evaBotId + '","text":"' + text + '",' +
+        '"attachments":[{"type":"image","url":"' + url + '"}]}';
         console.log(jsonString);
         var xhttp = new XMLHttpRequest();
         xhttp.open("POST", "https://api.groupme.com/v3/bots/post", true);
@@ -30,6 +29,7 @@
 <h3>Type what you want Eva to say!</h3>
 <textarea id="commentText" rows="4" cols="50">Type message here...</textarea>
 <h3>If you want Eva to also post an image, copy and paste the link below.</h3>
+<textarea id="imageLink" rows="4" cols="50">Paste image link here...</textarea>
 <br>
 <input type="button" value="Submit Comment" onclick="httpPostComment();">
 <input type="button" value="Submit Image" onclick="httpPostImage();">
