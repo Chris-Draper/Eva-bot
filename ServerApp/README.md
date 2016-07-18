@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 Helpful project links:
+
 https://www.wolfe.id.au/2014/02/01/getting-a-new-node-project-started-with-npm/ //this explains how to start the project
 http://babeljs.io/docs/plugins/preset-es2015/ //this gives the commands and files needed to make the javscript compile through javascript
 http://jamesknelson.com/writing-npm-packages-with-es6-using-the-babel-6-cli/ //basic tutorial explaining babel clii
