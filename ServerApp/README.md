@@ -1,8 +1,13 @@
-Helpful project links:
-https://www.wolfe.id.au/2014/02/01/getting-a-new-node-project-started-with-npm/ //this explains how to start the project
-http://babeljs.io/docs/plugins/preset-es2015/ //this gives the commands and files needed to make the javscript compile through javascript
-http://jamesknelson.com/writing-npm-packages-with-es6-using-the-babel-6-cli/ //basic tutorial explaining babel clii
-http://babeljs.io/docs/usage/cli/ //official babel cli website
+#Helpful project links:
+
+https://www.wolfe.id.au/2014/02/01/getting-a-new-node-project-started-with-npm/ 
+//explains how to start the project
+http://babeljs.io/docs/plugins/preset-es2015/
+//gives the commands and files needed to make the javscript compile through javascript
+http://jamesknelson.com/writing-npm-packages-with-es6-using-the-babel-6-cli/
+//basic tutorial explaining babel clii
+http://babeljs.io/docs/usage/cli/
+//official babel cli website
 
 Babel compile command: npm run babel
 
