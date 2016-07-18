@@ -10,6 +10,8 @@ http://babeljs.io/docs/usage/cli/
 //official babel cli website
 
 Babel compile command: npm run babel
+Http server command: npm run start
+This fires up localhost:8080
 
 Steps for setting up project environment
 

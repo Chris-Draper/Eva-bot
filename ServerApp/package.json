@@ -4,7 +4,7 @@
   "description": "A spike examining how to host a groupme bot on a localhost server",
   "main": "index.js",
   "scripts": {
-    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
+    "babel": "babel --presets es2015 js/index.js -o build/index.bundle.js",
     "start": "http-server"
   },
   "repository": {
