@@ -13,6 +13,8 @@ Babel compile command: npm run babel
 Http server command: npm run start
 This fires up localhost:8080
 
+Procfile is to specificy what npm commands Heroku needs to run to make this work on a server
+
 Steps for setting up project environment
 
     1. npm init 
